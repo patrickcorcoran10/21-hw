@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/patrickcorcoran10/21-hw/issues"
   },
-  "homepage": "https://github.com/patrickcorcoran10/21-hw#readme"
+  "homepage": "https://github.com/patrickcorcoran10/21-hw#readme",
+  "dependencies": {
+    "concurrently": "^6.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.11.19",
+    "morgan": "^1.10.0"
+  }
 }
