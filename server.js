@@ -25,10 +25,7 @@ mongoose.connect(
     }
   );
 
-// app.use(require("./routes/api.js"));
-
-// app.use(require("./routes/view.js"));
-
+app.use(require("./routes/api-routes.js"));
 
 app.listen(PORT, () => {
     console.log("We are working out on ", PORT)

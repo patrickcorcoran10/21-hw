@@ -1,28 +1,19 @@
 import './App.css';
-import { useState, useEffect } from "react";
-import Search from './components/Search'
-import BookList from './components/BookList.js'
-import bookData from './data/booksDummyData'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import Home from './pages/Home.js'
+import Saved from "./pages/Saved.js"
+
 
 function App() {
-  const [books, setBooks] = useState([]);
-  console.log(bookData)
-  useEffect(() => {
-    console.log("effect")
-    setBooks(bookData)
-    console.log(books)
-  }, [books])
-
-  // On click to grab books
- 
   return (
-    <div className="App">
-      <p>Book Search</p>
-      <Search/>
-      <BookList/>
-
-    </div>
-  );
+    <Router>
+    <Switch>
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/saved" component={Saved}/>
+    </Switch>
+    </Router>
+  )
+  
 }
 
 export default App;
